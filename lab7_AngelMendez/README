@@ -1,0 +1,34 @@
+Author: Angel Mendez
+
+How to run: 
+
+sudo python3.lab7.py target domain(google.com) #(Max # of hops)
+
+Questions: 
+
+1) Besides TCP, what other protocols can be used for a traceroute tool?
+
+Answer: Tracerout also can use UDP and ICMP while traditional linux uses UDP packets and windows tracert uses ICMP echo requests
+
+
+2) When traversing to a website, does the path remain constant every time?
+
+Answer: No, the path can change between each attmept and the internet routing can change depending on congestion
+
+3) If a packet dies before reaching the target website, what type of
+   packet is returned?
+
+Answer: An ICMP time exceeded packet is returned when the time to live reaches 0 before reaching the destination 
+
+4) Can the whois command be used to discover the owner of an AS number?
+
+Answer: Yes, Whois can show info about the organization that owns an autonomous system number 
+
+Citations: 
+
+https://www.geeksforgeeks.org/computer-networks/traceroute-in-network-layer/
+
+https://www.geeksforgeeks.org/python/display-hostname-ip-address-python/
+
+https://www.geeksforgeeks.org/python/network-scanning-using-scapy-module-python/
+
