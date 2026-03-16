@@ -1,0 +1,53 @@
+How to Run(Bash): 
+
+sudo python3 lab6.py http://example.com/
+
+For tester(Bash): 
+
+./test.sh
+
+To capture(Bash):
+
+sudo tcpdump -i any -w test.pcap tcp port 80
+
+
+Questions: 
+
+1) In lab 4 you sent a GET request using the sockets library. What did the sockets library do for you?
+
+Answer: The sockets handled all TCP connection details therefore I didn't have to manually build packets
+
+2) Before you submit this lab, what program should you use to analyze your pcap? Did the server send the complete HTML?
+
+Answer: Wireshark is for analyzing the pcap whereas the server usually sends only the first packet of the HTML since it stops after one GET request and doesn't handle streaming
+
+3) Is your program guaranteed to receive a complete HTML response? Why or why not?
+
+Answer: No, this is cause scapy only sends a single GET requests and doesn't implement full TCP assembly and or multiple packets of the HTTP
+
+4) Can you merge the final ACK of the three-way handshake with the GET request?
+
+Answer: Yes, you can set both ACK and PSH flags in one packet and include a GET request and makes it all one single part 
+
+5) Can Scapy be used to send other types of packets? Give an example.
+
+Answer: Yes, Scapy can create and send packets at any layer for example ICMP, UDP, and TCP
+
+
+
+Citations: 
+
+https://www.geeksforgeeks.org/python/network-scanning-using-scapy-module-python/
+
+https://www.geeksforgeeks.org/computer-networks/tcp-3-way-handshake-process/
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Reference/Methods
+
+ChatGPT, OpenAI. Assistance with Lab 6: Scapy three-way handshake and GET request. Helped debug and improve Python code, including handling DNS resolution and sequence numbers.
+Specific lines addressed:
+
+Line 20: dst_ip = gethostbyname(host) – resolved socket.gaierror by correcting URL parsing
+
+Lines 31–39: SYN, ACK, and GET packet sequence – clarified proper sequence numbers and flags
+Accessed February 2026.
+
