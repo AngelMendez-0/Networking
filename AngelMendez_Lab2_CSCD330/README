@@ -1,0 +1,38 @@
+CSCD 330 Lab 2: Web API
+
+How to Run:
+Run the program using:
+python3 lab2.py <domain>
+
+Example:
+python3 lab2.py google.com
+
+This program takes a domain name, resolves it to an IP address, finds the
+physical address of the company using whois, converts that address to
+latitude and longitude using the US Census Geocoding API, and then retrieves
+hourly weather data using the weather.gov API. The hourly temperatures are
+then plotted.
+
+Questions:
+
+1. What is an API?
+An API is a application programming interface that helps software programs to communicate with eachother 
+
+2. What is a RESTful API? Were the APIs we used RESTful?
+A RESTful API uses HTTP methods like GET to return the resources using URLS and yes they are resful APIs
+
+3. What is JSON? Did these APIs use JSON?
+JSON is adata format used to store and transmit data, both APIs returned data using it
+
+4. What is Bash? Have you ever used Bash?
+Bash is a command line shell that helps execute commands and scripts in unix systems, yes i have used bash before but im not overly familiar with it
+
+
+Sources / Help:
+
+ChatGPT (OpenAI). Used for debugging assistance and code clarification.
+
+Worked with Martin Diaz as a partner
+
+GeeksForGeeks also helped with some code fundementals
+https://www.geeksforgeeks.org/python/introduction-to-python/
